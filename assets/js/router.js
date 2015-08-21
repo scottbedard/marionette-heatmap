@@ -12,10 +12,12 @@ App.module('Router', function(Router, App, Backbone, Marionette, $, _) {
             'heatmap': 'heatmap',
         },
         index: function() {
-            console.log ('This is the index');
+            var Page = App.module('Heatmap.Views').Index;
+            App.root.main.show(new Page);
         },
         heatmap: function() {
-            console.log ('This is the heatmap');
+            var Page = App.module('Heatmap.Views').Heatmap;
+            App.root.main.show(new Page);
         },
     });
 

@@ -13,9 +13,13 @@ App.RootLayout = Marionette.LayoutView.extend({
     template: '#app-layout',
     regions: {
         header: '#header',
+        main: '#main',
     },
-    onRender: function() {
-        // Render the header layout
+    initialize: function() {
+        // Render the layout
+        this.render();
+
+        // Render the header sub-layout
         var HeaderLayout = App.module('Header.Views').Layout;
         this.header.show(new HeaderLayout());
     },
@@ -27,8 +31,7 @@ App.RootLayout = Marionette.LayoutView.extend({
 App.on('start', function() {
 
     // Render the root layout
-    var rootLayout = new App.RootLayout();
-    rootLayout.render();
+    App.root = new App.RootLayout();
 
     // Fire up router and tell Backbone to pay attention
     var Router = new (App.module('Router').Router);

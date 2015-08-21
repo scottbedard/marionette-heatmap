@@ -12,6 +12,7 @@
         <!-- Templates -->
         <script id="app-layout" type="text/template">
             <nav id="header" class="navbar navbar-default"></nav>
+            <main id="main" class="container">Loading...</main>
         </script>
 
         <script id="header-layout" type="text/template">
@@ -19,6 +20,17 @@
                 <div id="logo-region" class="navbar-header"></div>
                 <div id="links-region"></div>
             </div>
+        </script>
+
+        <script id="index-page" type="text/template">
+            <div class="jumbotron">
+                <h1>Welcome!</h1>
+                <p>This page has nothing to do with the app, I just wanted an excuse to make a SPA.</p>
+            </div>
+        </script>
+
+        <script id="heatmap-page" type="text/template">
+            This is the heatmap
         </script>
 
         <!-- Dependencies -->
@@ -32,6 +44,7 @@
         <script src="assets/js/router.js"></script>
         <script src="assets/js/header/links.js"></script>
         <script src="assets/js/header/views.js"></script>
+        <script src="assets/js/heatmap/views.js"></script>
 
         <!-- Marionette, do your thing! -->
         <script>

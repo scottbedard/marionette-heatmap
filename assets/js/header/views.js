@@ -41,9 +41,6 @@ App.module('Header.Views', function(HeaderViews, App, Backbone, Marionette, $, _
         template: _.template('Marionette Heatmap'),
         tagName: 'a',
         className: 'navbar-brand',
-        attributes: {
-            href: '#',
-        },
     });
 
     // Link ItemView
