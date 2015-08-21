@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Marionette Heatmap</title>
+        <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/app.css">
+    </head>
+    <body>
+
+        <!-- Application container -->
+        <div id="app"></div>
+
+        <!-- Templates -->
+        <script id="app-layout" type="text/template">
+            <nav id="header" class="navbar navbar-default"></nav>
+        </script>
+
+        <script id="header-layout" type="text/template">
+            <div class="container-fluid container">
+                <div id="logo-region" class="navbar-header"></div>
+                <div id="links-region"></div>
+            </div>
+        </script>
+
+        <!-- Dependencies -->
+        <script src="assets/js/vendor/jquery.min.js"></script>
+        <script src="assets/js/vendor/underscore-min.js"></script>
+        <script src="assets/js/vendor/backbone-min.js"></script>
+        <script src="assets/js/vendor/backbone.marionette.min.js"></script>
+
+        <!-- Application -->
+        <script src="assets/js/app.js"></script>
+        <script src="assets/js/router.js"></script>
+        <script src="assets/js/header/links.js"></script>
+        <script src="assets/js/header/views.js"></script>
+
+        <!-- Marionette, do your thing! -->
+        <script>
+            App.start();
+        </script>
+
+    </body>
+</html>
